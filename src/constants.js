@@ -1,0 +1,9 @@
+export const TOOL_ITEMS = {
+  LINE: "LINE",
+  RECTANGLE: "RECTANGLE",
+  CIRCLE: "CIRCLE",
+  ARROW: "ARROW",
+  BRUSH: "BRUSH",
+  ERASER: "ERASER",
+  TEXT: "TEXT",
+};
