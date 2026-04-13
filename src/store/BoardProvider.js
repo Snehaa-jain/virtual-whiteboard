@@ -11,6 +11,9 @@ const BoardProvider = ({ children }) => {
   const [strokeColor, setStrokeColor] = useState("#000000");
   const [strokeWidth, setStrokeWidth] = useState(2);
 
+  // Auth State (Retrieve token for API calls)
+  const token = localStorage.getItem("token");
+
   const changeTool = (tool) => setActiveToolItem(tool);
 
   const undo = useCallback(() => {
@@ -30,8 +33,17 @@ const BoardProvider = ({ children }) => {
   return (
     <boardContext.Provider
       value={{ 
-        activeToolItem, changeTool, elements, setElements, undo, redo,
-        strokeColor, setStrokeColor, strokeWidth, setStrokeWidth 
+        activeToolItem, 
+        changeTool, 
+        elements, 
+        setElements, 
+        undo, 
+        redo,
+        strokeColor, 
+        setStrokeColor, 
+        strokeWidth, 
+        setStrokeWidth,
+        token 
       }}
     >
       {children}
